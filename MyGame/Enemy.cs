@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using PowerUp.cs;
 
 namespace MyGame
 {
@@ -63,12 +62,11 @@ namespace MyGame
             }
         }
 
-
-        public void PickupPowerUp(PowerUp powerUp, float value)
+        public void PickupPowerUp(PowerUp power, float value)
         {
-            switch (powerUp)
+            switch (power)
             {
-                case powerUp.Health:
+                case PowerUp.Health:
                     health = Math.Min(health + value, 100);
                     break;
                 case PowerUp.Shield:

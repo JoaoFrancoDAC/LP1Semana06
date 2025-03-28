@@ -21,6 +21,13 @@ namespace MyGame
                 Console.WriteLine($"{enemyListed.GetName()} {enemyListed.GetHealth()} {enemyListed.GetShield()}");
             }
 
+
+            Enemy testEnemy = new Enemy("Teste");
+            Console.WriteLine($"{testEnemy.GetName()} {testEnemy.GetHealth()} {testEnemy.GetShield()}");
+
+            testEnemy.TakeDamage(10);
+            Console.WriteLine($"{testEnemy.GetName()} {testEnemy.GetHealth()} {testEnemy.GetShield()}");
+
         }
     }
 }
