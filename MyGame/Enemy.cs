@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using PowerUp.cs;
 
 namespace MyGame
 {
@@ -59,6 +60,20 @@ namespace MyGame
                 shield = 0;
                 health -= damageStillToInflict;
                 if (health < 0) health = 0;
+            }
+        }
+
+
+        public void PickupPowerUp(PowerUp powerUp, float value)
+        {
+            switch (powerUp)
+            {
+                case powerUp.Health:
+                    health = Math.Min(health + value, 100);
+                    break;
+                case PowerUp.Shield:
+                    shield = Math.Min(shield + value, 100);
+                    break;
             }
         }
     }
