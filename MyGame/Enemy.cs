@@ -10,12 +10,19 @@ namespace MyGame
         private string name;
         private float health;
         private float shield;
+        private static int totalPowerUps = 0;
 
         public Enemy(string name)
         {
             SetName(name); 
             health = 100;
             shield = 0;
+        }
+
+
+        static Enemy()
+        {
+            totalPowerUps = 0;
         }
 
 
@@ -73,6 +80,12 @@ namespace MyGame
                     shield = Math.Min(shield + value, 100);
                     break;
             }
+            totalPowerUps++;
+        }
+
+        public static int GetTotalPowerUps()
+        {
+            return totalPowerUps;
         }
     }
 }

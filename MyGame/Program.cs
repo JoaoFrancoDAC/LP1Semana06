@@ -37,6 +37,9 @@ namespace MyGame
             testEnemy.PickupPowerUp(PowerUp.Health, 31);
             Console.WriteLine($"Pegou 31 de cura aqui: \nNome: {testEnemy.GetName()}\nVida: {testEnemy.GetHealth()}\nEscudo: {testEnemy.GetShield()}\n\n\n");
 
+
+            Console.WriteLine($"Total de PowerUps coletados(Tem que ser 2): {Enemy.GetTotalPowerUps()}");
+
         }
     }
 }
