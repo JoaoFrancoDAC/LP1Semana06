@@ -13,7 +13,7 @@ namespace MyGame
 
         public Enemy(string name)
         {
-            this.name = name;
+            SetName(name); 
             health = 100;
             shield = 0;
         }
