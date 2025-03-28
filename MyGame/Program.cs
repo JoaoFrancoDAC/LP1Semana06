@@ -22,11 +22,20 @@ namespace MyGame
             }
 
 
-            Enemy testEnemy = new Enemy("Teste");
-            Console.WriteLine($"{testEnemy.GetName()} {testEnemy.GetHealth()} {testEnemy.GetShield()}");
 
-            testEnemy.TakeDamage(10);
-            Console.WriteLine($"{testEnemy.GetName()} {testEnemy.GetHealth()} {testEnemy.GetShield()}");
+
+            Enemy testEnemy = new Enemy("Teste");
+            Console.WriteLine($"Spawnou agora:\nNome: {testEnemy.GetName()}\nVida: {testEnemy.GetHealth()}\nEscudo: {testEnemy.GetShield()}\n\n\n");
+
+
+            testEnemy.PickupPowerUp(PowerUp.Shield, 30);
+            Console.WriteLine($"Pegou 30 de shield aqui: \nNome: {testEnemy.GetName()} \nVida: {testEnemy.GetHealth()}\nEscudo: {testEnemy.GetShield()}\n\n\n");
+
+            testEnemy.TakeDamage(60);
+            Console.WriteLine($"Tomou 60 de damage aqui: \nNome: {testEnemy.GetName()}\nVida: {testEnemy.GetHealth()}\nEscudo: {testEnemy.GetShield()}\n\n\n");
+
+            testEnemy.PickupPowerUp(PowerUp.Health, 31);
+            Console.WriteLine($"Pegou 31 de cura aqui: \nNome: {testEnemy.GetName()}\nVida: {testEnemy.GetHealth()}\nEscudo: {testEnemy.GetShield()}\n\n\n");
 
         }
     }
